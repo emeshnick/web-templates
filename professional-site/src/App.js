@@ -1,5 +1,5 @@
 import "./App.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 
 const styles = {
   app: {
@@ -11,6 +11,7 @@ const styles = {
   profileContainer: {
     padding: "5rem",
   },
+  profileImage: {},
 };
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Container style={styles.profileContainer}>
             <h1>Your Name</h1>
           </Container>
+          <Image src="./profile.png" />
         </Col>
         <Col>
           <Container>
