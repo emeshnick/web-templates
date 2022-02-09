@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Container, Row, Col } from "react-bootstrap";
+
+const styles = {
+  app: {
+    backgroundColor: "#fcc397",
+    position: "absolute",
+    minHeight: "100%",
+    minWidth: "100%",
+  },
+  profileContainer: {
+    padding: "5rem",
+  },
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container fluid="lg" style={styles.app} id="app">
+      <Row>
+        <Col>
+          <Container style={styles.profileContainer}>
+            <h1>Your Name</h1>
+          </Container>
+        </Col>
+        <Col>
+          <Container>
+            <p>heres some text</p>
+          </Container>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
