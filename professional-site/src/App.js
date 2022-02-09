@@ -1,5 +1,6 @@
 import "./App.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import { findByLabelText } from "@testing-library/react";
 
 const styles = {
   app: {
@@ -11,7 +12,15 @@ const styles = {
   profileContainer: {
     padding: "5rem",
   },
-  profileImage: {},
+  profileImage: {
+    width: "15rem",
+    height: "15rem",
+    objectFit: "cover",
+  },
+  portfolioDiv: {
+    padding: "3rem",
+    columnCount: "2",
+  },
 };
 
 function App() {
@@ -21,13 +30,18 @@ function App() {
         <Col>
           <Container style={styles.profileContainer}>
             <h1>Your Name</h1>
+            <Image src="./profile.png" style={styles.profileImage} />
+            <p>A little about yourself</p>
           </Container>
-          <Image src="./profile.png" />
         </Col>
         <Col>
-          <Container>
-            <p>heres some text</p>
-          </Container>
+          <div style={styles.portfolioDiv} className="text-center">
+            <Image src="./profile.png" style={styles.profileImage} />
+            <Image src="./profile.png" style={styles.profileImage} />
+            <Image src="./profile.png" style={styles.profileImage} />
+            <Image src="./profile.png" style={styles.profileImage} />
+            <Image src="./profile.png" style={styles.profileImage} />
+          </div>
         </Col>
       </Row>
     </Container>
